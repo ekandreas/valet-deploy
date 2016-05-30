@@ -18,7 +18,7 @@ date_default_timezone_set('Europe/Stockholm');
 
 include_once 'vendor/ekandreas/valet-deploy/recipe.php';
 
-set('domain','orasolvinfo.app');
+set('domain','the-local-domain.app');
 
 server( 'production', 'theserver-dns-or-ip', 22 )
     ->env('deploy_path','/deploy_path')
@@ -26,10 +26,10 @@ server( 'production', 'theserver-dns-or-ip', 22 )
     ->env('branch', 'master')
     ->stage('production')
     ->env('database','the_dbname')
-    ->env('domain','www.thedomain.se')
+    ->env('domain','www.the-remote-domain.se')
     ->identityFile();
 
-set('repository', 'https://github.com/ekandreas/orasolv-intra');
+set('repository', 'https://github.com/path-to-your-repo');
 
 // Symlink the .env file for Bedrock
 set('env', 'prod');
