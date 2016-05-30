@@ -1,0 +1,6 @@
+{
+    "name": "ekandreas/valet-deploy",
+    "version": "0.5",
+    "description": "Support package for deploying Valet develop environments for Laravel and WordPress/Bedrock",
+    "license": "MIT"
+}
