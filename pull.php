@@ -1,8 +1,5 @@
 <?php
-
 task('pull:create_database_dump', function () {
-    //runLocally('echo {{server.host}}');
-    //die;
     writeln('Creating a new database dump on the remote server');
     $database = env('database');
     run("mysqldump {$database} > /tmp/{$database}.sql", 999);
@@ -31,7 +28,7 @@ task('pull:search_and_replace_database', function () {
 
 task('pull:files', function () {
     writeln('Getting uploads, long duration first time! (approx. 60s)');
-    $user = has('user') ? get('user') : 'root';
+    $user = run('echo $USER');
     runLocally("rsync --exclude .cache -re ssh {$user}@{{server.host}}:{{deploy_path}}/shared/web/app/uploads web/app", 999);
 });
 
