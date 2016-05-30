@@ -7,7 +7,7 @@ Support package for deploying Valet develop environments for Laravel and WordPre
 
 ## Install
 ```
-composer require 'ekandreas/valet-deploy':* --save-dev
+composer require 'ekandreas/valet-deploy':* --dev
 ```
 
 Add a deploy.php in root, eg:
