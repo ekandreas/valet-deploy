@@ -42,6 +42,8 @@ task('pull:elastic', function () {
 task('pull:cleanup', function () {
     writeln('Cleaning up locally...');
     runLocally('rm {{database}}.sql');
+    writeln('Remove all tranisents');
+    runLocally('wp transient delete-all');
     writeln('Permalinks rewrite/flush');
     runLocally('wp rewrite flush');
     writeln('Activate query monitor');
