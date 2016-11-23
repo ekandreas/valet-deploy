@@ -1,19 +1,21 @@
 <?php
+namespace Deployer;
+
 task('pull:create_database_dump', function () {
     writeln('Creating a new database dump on the remote server');
-    $database = env('database');
+    $database = get('database');
     run("mysqldump {$database} > /tmp/{$database}.sql", 999);
 });
 
 task('pull:get_database_dump', function () {
     writeln('Downloading database dump from remote server');
-    $database_file = '/tmp/' . env('database') . '.sql';
-    download(env('database') . '.sql', $database_file);
+    $database_file = '/tmp/' . get('database') . '.sql';
+    download(get('database') . '.sql', $database_file);
 });
 
 task('pull:restore_database', function () {
     writeln('Restore remote database backup to local database');
-    $database = env('database') . '.sql';
+    $database = get('database') . '.sql';
     runLocally("wp db import {$database}", 999);
 });
 

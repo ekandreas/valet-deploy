@@ -1,4 +1,6 @@
 <?php
-include_once '/vendor/deployer/deployer/common.php';
-include_once 'init.php';
-include_once 'pull.php';
+namespace Deployer;
+
+require 'recipe/common.php';
+require 'init.php';
+require 'pull.php';

@@ -1,4 +1,5 @@
 <?php
+namespace Deployer;
 
 /**
  * Init WP with noncens data
