@@ -1,5 +1,5 @@
 # Valet Deploy
-Support package for deploying Valet develop environments for Laravel and WordPress/Bedrock.
+Support package for deploying (+pull) Valet develop environments for WordPress/Bedrock.
 
 ## Requirements
 * PHP Deployer installed locally, not required in package
@@ -68,7 +68,3 @@ To deploy the commited code to production:
 ```
 dep deploy production
 ```
-
-
-
-

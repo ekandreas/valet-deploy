@@ -1,6 +1,6 @@
 {
     "name": "ekandreas/valet-deploy",
-    "version": "0.6.2",
+    "version": "0.7.1",
     "type": "library",
     "description": "Support package for deploying Valet develop environments for Laravel and WordPress/Bedrock",
     "license": "MIT"
